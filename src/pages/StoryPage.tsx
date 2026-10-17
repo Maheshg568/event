@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import { MahotsavaLogo } from '../components/brand/MahotsavaLogo';
+import { LeadershipSection } from '../components/brand/LeadershipSection';
 import { Sparkles, Crown, Shield, Landmark, Heart, Compass } from 'lucide-react';
 
 interface StoryPageProps {
@@ -139,6 +140,11 @@ export const StoryPage: React.FC<StoryPageProps> = ({ onOpenEnquiry, onExploreVe
               </p>
             </div>
           </div>
+        </div>
+
+        {/* Founder & Managing Director Leadership Section */}
+        <div className="mt-12 sm:mt-16">
+          <LeadershipSection />
         </div>
 
         {/* Story CTAs */}
