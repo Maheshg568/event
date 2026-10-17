@@ -1,0 +1,29 @@
+<svg viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="128" height="128" rx="28" fill="#350606"/>
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stopColor="#FFFDF9" />
+      <stop offset="40%" stopColor="#E9D3B0" />
+      <stop offset="80%" stopColor="#C8A66A" />
+      <stop offset="100%" stopColor="#A88344" />
+    </linearGradient>
+  </defs>
+  <!-- Central Lotus Petal -->
+  <path d="M64 20 C69 34 77 50 76 68 C75 78 70 87 64 90 C58 87 53 78 52 68 C51 50 59 34 64 20 Z" fill="url(#goldGrad)"/>
+  <!-- Head Silhouette Cutout -->
+  <circle cx="64" cy="41" r="3.5" fill="#350606"/>
+  <!-- Torso Silhouette Cavity -->
+  <path d="M64 50 C61 50 59 56 59 65 C59 74 61 81 64 83 C67 81 69 74 69 65 C69 56 67 50 64 50 Z" fill="#350606"/>
+  <!-- Left Inner Petal -->
+  <path d="M51 36 C49 51 50 67 55 81 C52 77 49 70 48 61 C47 49 48 40 51 36 Z" fill="url(#goldGrad)"/>
+  <!-- Right Inner Petal -->
+  <path d="M77 36 C79 51 78 67 73 81 C76 77 79 70 80 61 C81 49 80 40 77 36 Z" fill="url(#goldGrad)"/>
+  <!-- Left Outer Petal -->
+  <path d="M37 43 C35 58 39 74 47 84 C43 80 39 72 37 62 C35 52 36 44 37 43 Z" fill="url(#goldGrad)"/>
+  <!-- Right Outer Petal -->
+  <path d="M91 43 C93 58 89 74 81 84 C85 80 89 72 91 62 C93 52 92 44 91 43 Z" fill="url(#goldGrad)"/>
+  <!-- Base Calyx Wings -->
+  <path d="M64 100 C53 93 39 87 23 85 C34 92 47 97 61 98 L64 100 Z" fill="url(#goldGrad)"/>
+  <path d="M64 100 C75 93 89 87 105 85 C94 92 81 97 67 98 L64 100 Z" fill="url(#goldGrad)"/>
+  <path d="M24 85 C42 85 57 92 64 97 C71 92 86 85 104 85 C87 93 75 99 64 108 C53 99 41 93 24 85 Z" fill="url(#goldGrad)"/>
+</svg>

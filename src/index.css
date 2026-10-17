@@ -1,0 +1,115 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: 'Cormorant Garamond', 'Cinzel', Georgia, serif;
+  --font-display: 'Cinzel', 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  
+  --color-burgundy-950: #210404;
+  --color-burgundy-900: #350606;
+  --color-burgundy-800: #570D0D;
+  --color-burgundy-700: #741A18;
+  --color-burgundy-600: #8C2220;
+  
+  --color-gold-champagne: #E9D3B0;
+  --color-gold-antique: #C8A66A;
+  --color-gold-muted: #C9B8A5;
+  
+  --color-ivory-warm: #F7F0E6;
+  --color-ivory-pure: #FFFDF9;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-sans);
+  background-color: #350606;
+  color: #F7F0E6;
+}
+
+/* Custom delicate champagne-gold scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #210404;
+}
+::-webkit-scrollbar-thumb {
+  background: #570D0D;
+  border-radius: 9999px;
+  border: 1px solid #C8A66A40;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #C8A66A;
+}
+
+/* Authentic cloudy burgundy texture mirroring the logo artwork */
+.bg-burgundy-cloudy {
+  background-color: #350606;
+  background-image: 
+    radial-gradient(circle at 50% 30%, #570D0D 0%, #350606 60%, #210404 100%),
+    radial-gradient(ellipse at 80% 20%, rgba(116, 26, 24, 0.4) 0%, transparent 50%),
+    radial-gradient(ellipse at 20% 80%, rgba(87, 13, 13, 0.5) 0%, transparent 60%);
+}
+
+.bg-burgundy-texture {
+  background-color: #350606;
+  background-image: 
+    radial-gradient(circle at 50% 25%, #570D0D 0%, #350606 70%, #210404 100%),
+    radial-gradient(circle at 85% 75%, rgba(116, 26, 24, 0.35) 0%, transparent 55%),
+    radial-gradient(circle at 15% 45%, rgba(87, 13, 13, 0.4) 0%, transparent 50%);
+}
+
+/* Subtle organic grain effect for royal parchment / textured fabric */
+.texture-overlay {
+  position: relative;
+}
+.texture-overlay::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.04;
+  background-image: radial-gradient(#E9D3B0 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* Champagne gold metallic text gradient */
+.gold-text-shimmer {
+  background: linear-gradient(135deg, #FFFDF9 0%, #E9D3B0 45%, #C8A66A 85%, #9E7D42 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Delicate gold borders & glows */
+.border-gold-delicate {
+  border-color: rgba(200, 166, 106, 0.3);
+}
+
+.gold-glow-subtle {
+  box-shadow: 0 0 30px -8px rgba(200, 166, 106, 0.25);
+}
+
+.gold-glow-card:hover {
+  box-shadow: 0 12px 35px -5px rgba(200, 166, 106, 0.22);
+}
+
+/* Respect user's reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Hide scrollbar utility for clean mobile swipeable tabs */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
