@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { siteConfig } from '../../config/siteConfig';
 import { submitCustomerOrder } from '../../lib/supabase';
+import { sendOrderEmailNotification } from '../../lib/email';
 import {
   Sparkles,
   Calendar,
@@ -73,7 +73,7 @@ export const EnquiryForm: React.FC<EnquiryFormProps> = ({
       const randomNum = Math.floor(1000 + Math.random() * 9000);
       const refId = `MG-2026-${randomNum}`;
 
-      // Insert customer celebration order directly into Supabase 'orders' table
+      // 1. Insert customer celebration order directly into Supabase 'orders' table
       await submitCustomerOrder({
         reference_id: refId,
         full_name: formData.fullName,
@@ -85,6 +85,20 @@ export const EnquiryForm: React.FC<EnquiryFormProps> = ({
         message: formData.message || (formData.preferredSpace ? `Preferred Space: ${formData.preferredSpace} (${formData.preferredSetup})` : ''),
         status: 'new',
       });
+
+      // 2. Dispatch instant email notification to mahotsavagrandeur@gmail.com
+      sendOrderEmailNotification({
+        referenceId: refId,
+        fullName: formData.fullName,
+        phone: formData.phone,
+        email: formData.email,
+        occasionType: formData.occasionType,
+        preferredDate: formData.preferredDate,
+        guestCount: formData.guestCount,
+        space: formData.preferredSpace,
+        setup: formData.preferredSetup,
+        message: formData.message,
+      }).catch((err) => console.warn('Email dispatch warning:', err));
 
       const submitted = {
         referenceId: refId,
