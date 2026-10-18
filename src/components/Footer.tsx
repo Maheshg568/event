@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { Crown, Sparkles, MapPin, Mail, Phone } from 'lucide-react';
+import { Sparkles, MapPin, Mail, Phone } from 'lucide-react';
+import { MahotsavaLogo } from './brand/MahotsavaLogo';
 
 interface FooterProps {
   onOpenBooking: () => void;
@@ -24,14 +25,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenBooking, onOpenAdmin }) =>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 mb-16">
           {/* Brand Column (2 cols) */}
           <div className="lg:col-span-2 space-y-4">
-            <div className="flex items-center gap-2.5">
-              <div className="w-8 h-8 rounded-full border border-[#d4af37]/50 flex items-center justify-center bg-[#13110b]">
-                <Crown className="w-4 h-4 text-[#d4af37]" />
-              </div>
-              <span className="font-serif text-lg font-bold tracking-[0.25em] uppercase text-[#fbf7ee]">
-                ROYALAURA EVENTS
-              </span>
-            </div>
+            <MahotsavaLogo variant="horizontal" size="md" />
 
             <p className="text-xs text-[#9ca3af] leading-relaxed max-w-sm">
               International event architecture, heritage palace weddings, and sovereign diplomatic summits. Crafted with unyielding discretion and timeless elegance.

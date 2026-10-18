@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
+import { MahotsavaLogo } from './brand/MahotsavaLogo';
 import { Booking, BookingStatus } from '../types';
 import {
   LayoutDashboard,
@@ -105,14 +106,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
         <div>
           {/* Logo Brand */}
           <div className="p-6 border-b border-[#181a24] flex items-center justify-between">
-            <div>
-              <span className="font-serif text-lg font-bold tracking-[0.2em] uppercase text-[#fbf7ee] block">
-                ROYALAURA
-              </span>
-              <span className="text-[10px] tracking-[0.3em] font-mono text-[#d4af37] uppercase">
-                ADMIN CONCIERGE
-              </span>
-            </div>
+            <MahotsavaLogo variant="horizontal" size="sm" />
             <button
               onClick={() => setSidebarOpen(false)}
               className="lg:hidden p-1 text-[#9ca3af] hover:text-white"

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { Crown } from 'lucide-react';
+import { MahotsavaLogo } from './brand/MahotsavaLogo';
 
 interface PreloaderProps {
   onComplete: () => void;
@@ -59,18 +59,7 @@ export const Preloader: React.FC<PreloaderProps> = ({ onComplete }) => {
             transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
             className="flex flex-col items-center gap-3 relative z-10"
           >
-            <div className="w-12 h-12 rounded-full border border-[#d4af37]/40 flex items-center justify-center bg-[#13110b]/60 backdrop-blur-sm shadow-[0_0_20px_rgba(212,175,55,0.2)]">
-              <Crown className="w-6 h-6 text-[#d4af37]" />
-            </div>
-
-            <div className="text-center">
-              <span className="block font-serif tracking-[0.35em] text-xl md:text-2xl font-bold uppercase gold-gradient-text">
-                ROYALAURA
-              </span>
-              <span className="block text-[11px] tracking-[0.45em] text-[#c7ab67] uppercase font-medium mt-1">
-                EVENTS & EXPERIENCES
-              </span>
-            </div>
+            <MahotsavaLogo variant="full" size="md" />
           </motion.div>
 
           {/* Thin gold animated line */}

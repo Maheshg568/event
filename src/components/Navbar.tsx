@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { Crown, Sparkles, LayoutDashboard, Menu, X, Compass, CalendarCheck } from 'lucide-react';
+import { Sparkles, LayoutDashboard, Menu, X, Compass, CalendarCheck } from 'lucide-react';
+import { MahotsavaLogo } from './brand/MahotsavaLogo';
 
 interface NavbarProps {
   onOpenBooking: () => void;
@@ -66,29 +67,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             className="group flex items-center gap-2.5 text-left select-none"
             aria-label="RoyalAura Events"
           >
-            <div
-              className={`rounded-full border border-[#d4af37]/50 flex items-center justify-center transition-all duration-300 ${
-                isScrolled ? 'w-8 h-8 bg-[#121318]' : 'w-9 h-9 bg-[#1a1712]/60'
-              } shadow-[0_0_15px_rgba(212,175,55,0.2)] group-hover:border-[#d4af37]`}
-            >
-              <Crown
-                className={`text-[#d4af37] transition-all duration-300 ${
-                  isScrolled ? 'w-4 h-4' : 'w-4.5 h-4.5'
-                }`}
-              />
-            </div>
-            <div className="flex flex-col">
-              <span
-                className={`font-serif tracking-[0.22em] font-bold text-[#fbf7ee] uppercase transition-all duration-300 ${
-                  isScrolled ? 'text-base md:text-lg' : 'text-lg md:text-xl'
-                }`}
-              >
-                ROYALAURA
-              </span>
-              <span className="text-[9px] tracking-[0.35em] text-[#d4af37]/80 uppercase -mt-0.5 font-medium">
-                EVENTS
-              </span>
-            </div>
+            <MahotsavaLogo variant="horizontal" size="md" />
           </a>
 
           {/* Zone 2: 4-6 Nav Links with Animated expanding underline */}

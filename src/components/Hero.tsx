@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { motion, useMotionValue, useSpring, useTransform } from 'motion/react';
 import { Sparkles, ArrowRight, Play, Award, ShieldCheck } from 'lucide-react';
+import { MahotsavaLogo } from './brand/MahotsavaLogo';
 
 interface HeroProps {
   onOpenBooking: () => void;
@@ -188,18 +189,14 @@ export const Hero: React.FC<HeroProps> = ({
         }}
         className="relative z-20 max-w-5xl mx-auto text-center flex flex-col items-center"
       >
-        {/* 1. Logo / Kicker: 0.2s fade + upward */}
+        {/* 1. Logo */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-          className="inline-flex items-center gap-3 px-4 py-1.5 rounded-full border border-[#d4af37]/35 bg-[#121319]/80 backdrop-blur-md mb-6 shadow-[0_0_20px_rgba(212,175,55,0.12)]"
+          className="mb-6 flex justify-center"
         >
-          <Sparkles className="w-3.5 h-3.5 text-[#d4af37]" />
-          <span className="font-serif text-[11px] sm:text-xs tracking-[0.3em] uppercase text-[#f5eed6] font-semibold">
-            ROYALAURA EVENTS & PRODUCTIONS
-          </span>
-          <span className="w-1.5 h-1.5 rounded-full bg-[#d4af37]" />
+          <MahotsavaLogo variant="full" size="lg" />
         </motion.div>
 
         {/* 2. Main Heading Line 1: 0.4s fade + upward */}
