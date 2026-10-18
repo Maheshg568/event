@@ -35,7 +35,7 @@ export async function sendOrderEmailNotification(order: OrderEmailPayload): Prom
       'Submitted At (IST)': new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' }),
     };
 
-    const response = await fetch('https://formsubmit.co/ajax/mahotsavagrandeur@gmail.com', {
+    const response = await fetch('https://formsubmit.co/ajax/8731649c3e2e6a2d76514110d37fd0e6', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
