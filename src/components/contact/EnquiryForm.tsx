@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { siteConfig } from '../../config/siteConfig';
+import { submitCustomerOrder } from '../../lib/supabase';
 import {
   Sparkles,
   Calendar,
@@ -58,15 +59,34 @@ export const EnquiryForm: React.FC<EnquiryFormProps> = ({
     return Object.keys(errs).length === 0;
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!validate()) return;
 
     setIsSubmitting(true);
+    setErrors((prev) => {
+      const next = { ...prev };
+      delete next.submit;
+      return next;
+    });
 
-    setTimeout(() => {
-      const randomNum = Math.floor(100 + Math.random() * 900);
+    try {
+      const randomNum = Math.floor(1000 + Math.random() * 9000);
       const refId = `MG-2026-${randomNum}`;
+
+      // Insert customer celebration order directly into Supabase 'orders' table
+      await submitCustomerOrder({
+        reference_id: refId,
+        full_name: formData.fullName,
+        phone: formData.phone,
+        email: formData.email,
+        occasion_type: formData.occasionType,
+        preferred_date: formData.preferredDate,
+        guest_count: formData.guestCount,
+        message: formData.message || (formData.preferredSpace ? `Preferred Space: ${formData.preferredSpace} (${formData.preferredSetup})` : ''),
+        status: 'new',
+      });
+
       const submitted = {
         referenceId: refId,
         submittedAt: new Date().toLocaleDateString('en-US', {
@@ -77,9 +97,18 @@ export const EnquiryForm: React.FC<EnquiryFormProps> = ({
       };
 
       setSubmittedBooking(submitted);
-      setIsSubmitting(false);
       if (onEnquirySuccess) onEnquirySuccess(refId);
-    }, 750);
+    } catch (err: any) {
+      console.error('Failed to submit celebration enquiry to database:', err);
+      setErrors((prev) => ({
+        ...prev,
+        submit:
+          err?.message ||
+          'Failed to transmit enquiry to database. Please connect directly via WhatsApp or telephone.',
+      }));
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleDownloadBrochure = () => {
@@ -317,14 +346,24 @@ export const EnquiryForm: React.FC<EnquiryFormProps> = ({
                 />
               </div>
 
-              {/* Privacy Notice & Demo Mode Disclosure */}
+              {/* Privacy Notice & Live Cloud Status */}
               <div className="pt-2 flex flex-col sm:flex-row sm:items-center justify-between gap-4 text-[11px] font-mono text-[#C9B8A5]">
                 <div className="flex items-center gap-1.5">
                   <ShieldCheck className="w-3.5 h-3.5 text-[#C8A66A]" />
                   <span>Confidential Non-Disclosure Protocol Active</span>
                 </div>
-                <span className="text-[#C8A66A]/80">Demo Concierge Mode · Immediate Reference Code</span>
+                <span className="text-[#C8A66A]/90 flex items-center gap-1.5">
+                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                  <span>Live Concierge Cloud Active · Instant Reference Code</span>
+                </span>
               </div>
+
+              {errors.submit && (
+                <div className="p-3.5 bg-rose-950/80 border border-rose-500/60 rounded-xs text-rose-200 text-xs flex items-center gap-2">
+                  <AlertCircle className="w-4 h-4 shrink-0 text-rose-400" />
+                  <span>{errors.submit}</span>
+                </div>
+              )}
 
               {/* Submit CTA */}
               <button
