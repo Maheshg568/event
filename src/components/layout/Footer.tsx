@@ -1,7 +1,7 @@
 import React from 'react';
 import { MahotsavaLogo } from '../brand/MahotsavaLogo';
 import { siteConfig } from '../../config/siteConfig';
-import { Mail, Phone, MapPin, Sparkles, Clock, ShieldCheck } from 'lucide-react';
+import { Mail, Phone, MapPin, Clock, ShieldCheck, MessageSquare } from 'lucide-react';
 
 interface FooterProps {
   onNavigate: (pageId: 'home' | 'story' | 'venue' | 'celebrations' | 'gallery' | 'contact') => void;
@@ -26,7 +26,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenEnquiry }) => 
             </button>
 
             <p className="text-xs sm:text-sm text-[#C9B8A5]/90 leading-relaxed max-w-sm font-light">
-              Where every celebration becomes grandeur. A sanctuary of monumental Indian architectural grandeur, bespoke ceremonial scenography, and royal hospitality.
+              Where every celebration becomes grandeur. Hubballi–Dharwad’s premier event management and celebration planning brand, delivering unforgettable weddings, cultural mahotsavas, and corporate events across Karnataka.
             </p>
 
             <div className="pt-1 sm:pt-2 flex flex-wrap items-center gap-2.5 sm:gap-3">
@@ -71,17 +71,33 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenEnquiry }) => 
             <div className="space-y-2.5 sm:space-y-3 text-[11px] font-mono">
               <div className="flex items-start gap-2.5">
                 <MapPin className="w-4 h-4 text-[#C8A66A] shrink-0 mt-0.5" />
-                <span>{siteConfig.contact.locationCity}</span>
+                <span>{siteConfig.contact.officeAddress}</span>
+              </div>
+              <div className="flex items-start gap-2.5">
+                <Phone className="w-4 h-4 text-[#C8A66A] shrink-0 mt-0.5" />
+                <div>
+                  <a href={`tel:${siteConfig.contact.conciergePhone}`} className="hover:text-[#E9D3B0] block">
+                    {siteConfig.contact.conciergePhone}
+                  </a>
+                  <a href={`tel:${siteConfig.contact.alternativePhone}`} className="hover:text-[#E9D3B0] text-[10px] text-[#C9B8A5]/80 block">
+                    {siteConfig.contact.alternativePhone}
+                  </a>
+                </div>
               </div>
               <div className="flex items-center gap-2.5">
-                <Phone className="w-4 h-4 text-[#C8A66A] shrink-0" />
-                <a href={`tel:${siteConfig.contact.conciergePhone}`} className="hover:text-[#E9D3B0]">
-                  {siteConfig.contact.conciergePhone}
+                <MessageSquare className="w-4 h-4 text-[#25D366] shrink-0" />
+                <a
+                  href={`https://wa.me/916363116158?text=Namaste%20Mahotsava%20Grandeur`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-[#E9D3B0]"
+                >
+                  WhatsApp: +91 6363116158
                 </a>
               </div>
               <div className="flex items-center gap-2.5">
                 <Mail className="w-4 h-4 text-[#C8A66A] shrink-0" />
-                <a href={`mailto:${siteConfig.contact.inquiryEmail}`} className="hover:text-[#E9D3B0]">
+                <a href={`mailto:${siteConfig.contact.inquiryEmail}`} className="hover:text-[#E9D3B0] break-all">
                   {siteConfig.contact.inquiryEmail}
                 </a>
               </div>
@@ -111,10 +127,10 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenEnquiry }) => 
           <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-4">
             <span className="flex items-center gap-1">
               <ShieldCheck className="w-3.5 h-3.5 text-[#C8A66A]" />
-              Verified Luxury Destination
+              Hubballi–Dharwad, Karnataka – 580020
             </span>
             <span>·</span>
-            <span>Bengaluru Heritage Sanctum</span>
+            <span>Primary Service Area: North Karnataka & Beyond</span>
           </div>
         </div>
       </div>

@@ -78,11 +78,11 @@ export const Footer: React.FC<FooterProps> = ({ onOpenBooking, onOpenAdmin }) =>
             <div className="space-y-2 text-[11px]">
               <div className="flex items-center gap-2">
                 <Mail className="w-3.5 h-3.5 text-[#d4af37]" />
-                <span className="font-mono">concierge@royalaura.events</span>
+                <span className="font-mono">mahotsavagrandeur@gmail.com</span>
               </div>
               <div className="flex items-center gap-2">
                 <Phone className="w-3.5 h-3.5 text-[#d4af37]" />
-                <span className="font-mono">+44 20 7946 0912</span>
+                <span className="font-mono">+91 6363116158</span>
               </div>
               <div className="pt-2">
                 <button
@@ -99,7 +99,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenBooking, onOpenAdmin }) =>
         {/* Bottom bar */}
         <div className="pt-8 border-t border-[#151722] flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] font-mono text-[#6b7280]">
           <div>
-            © {new Date().getFullYear()} RoyalAura Events S.A. All Sovereign Rights Reserved.
+            © {new Date().getFullYear()} MAHOTSAVA GRANDEUR. All Rights Reserved. Hubballi–Dharwad, Karnataka.
           </div>
           <div className="flex items-center gap-4">
             <button

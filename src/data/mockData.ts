@@ -222,7 +222,7 @@ export const TESTIMONIALS_DATA: TestimonialItem[] = [
     role: 'Patrons of the British Arts',
     eventTitle: '3-Day Lake Como Wedding',
     location: 'Villa Balbiano, Italy',
-    quote: 'RoyalAura transformed an impossibly ambitious dream into a poetic reality. Every guest from Tokyo to New York was left speechless by the precision, grace, and sublime taste.',
+    quote: 'Mahotsava Grandeur transformed an impossibly ambitious dream into a poetic reality. Every guest was left speechless by the precision, grace, and sublime taste.',
     rating: 5,
   },
   {
@@ -231,7 +231,7 @@ export const TESTIMONIALS_DATA: TestimonialItem[] = [
     role: 'Chairman, Global Health Consortium',
     eventTitle: 'International Sovereign Summit',
     location: 'Geneva & Gstaad',
-    quote: 'Handling heads of state and Nobel laureates requires an acute diplomatic sensitivity that very few agencies possess. RoyalAura executed with flawless gravitas and beauty.',
+    quote: 'Handling heads of state and Nobel laureates requires an acute diplomatic sensitivity that very few agencies possess. Mahotsava Grandeur executed with flawless gravitas and beauty.',
     rating: 5,
   },
   {

@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import { siteConfig } from '../../config/siteConfig';
-import { Crown, Sparkles, Quote, Mail, Linkedin, ArrowUpRight } from 'lucide-react';
+import { Crown, Sparkles, Quote, Mail, Linkedin, Instagram, ArrowUpRight } from 'lucide-react';
 
 export const LeadershipSection: React.FC = () => {
   const leaders = siteConfig.leadership || [];
@@ -102,7 +102,18 @@ export const LeadershipSection: React.FC = () => {
                 <span className="font-mono text-[11px] text-[#C8A66A]/80 tracking-wider uppercase">
                   Executive Directorate
                 </span>
-                <div className="flex items-center gap-3">
+                <div className="flex items-center gap-2.5">
+                  {leader.instagram && (
+                    <a
+                      href={leader.instagram}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="p-2 rounded bg-[#210404] border border-[#741A18] text-[#C9B8A5] hover:text-[#FFFDF9] hover:border-[#C8A66A] transition-colors"
+                      title="Instagram Profile"
+                    >
+                      <Instagram className="w-3.5 h-3.5" />
+                    </a>
+                  )}
                   {leader.linkedin && (
                     <a
                       href={leader.linkedin}

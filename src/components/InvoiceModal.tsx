@@ -48,7 +48,7 @@ export const InvoiceModal: React.FC<InvoiceModalProps> = ({
   };
 
   const handleDownload = () => {
-    onToast('Dossier Downloaded', `RoyalAura Quotation ${booking.id}.pdf ready.`);
+    onToast('Dossier Downloaded', `Mahotsava Grandeur Quotation ${booking.id}.pdf ready.`);
   };
 
   return (
@@ -114,7 +114,7 @@ export const InvoiceModal: React.FC<InvoiceModalProps> = ({
                       Quotation Generated
                     </span>
                     <span className="text-[11px] text-[#9ca3af] font-mono">
-                      Verified by RoyalAura Treasury & Managing Director
+                      Verified by Mahotsava Grandeur Directorate & Managing Director
                     </span>
                   </div>
                 </div>
@@ -124,10 +124,10 @@ export const InvoiceModal: React.FC<InvoiceModalProps> = ({
                   <div className="flex items-center justify-between border-b border-[#202333] pb-4">
                     <div>
                       <span className="font-serif text-base font-bold text-[#fbf7ee] uppercase tracking-wider block">
-                        ROYALAURA EVENTS S.A.
+                        MAHOTSAVA GRANDEUR
                       </span>
                       <span className="text-[#9ca3af] font-mono text-[10px]">
-                        Geneva · Monaco · Milan · Paris
+                        Hubballi–Dharwad · Karnataka · 580020
                       </span>
                     </div>
                     <div className="text-right">

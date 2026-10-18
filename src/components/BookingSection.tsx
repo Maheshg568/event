@@ -306,7 +306,7 @@ export const BookingSection: React.FC<BookingSectionProps> = ({
                 </button>
 
                 <a
-                  href={`https://wa.me/?text=Hello%20RoyalAura%2C%20inquiring%20about%20booking%20${submittedBooking.id}`}
+                  href={`https://wa.me/916363116158?text=Namaste%20Mahotsava%20Grandeur%2C%20inquiring%20about%20booking%20${submittedBooking.id}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-6 py-3 text-xs font-serif tracking-[0.16em] uppercase font-semibold text-[#fbf7ee] hover:text-[#d4af37] border border-[#2e3244] hover:border-[#d4af37]/60 bg-[#12141d] rounded-sm transition-all"
@@ -521,7 +521,7 @@ export const BookingSection: React.FC<BookingSectionProps> = ({
                           Step 2: Bespoke Services & Elements
                         </h3>
                         <p className="text-xs text-[#9ca3af]">
-                          Select the disciplines you wish RoyalAura to orchestrate.
+                          Select the disciplines you wish Mahotsava Grandeur to orchestrate.
                         </p>
                       </div>
 

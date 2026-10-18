@@ -160,7 +160,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                 </button>
 
                 <div className="flex items-center justify-between text-[11px] font-mono text-[#C9B8A5] pt-1">
-                  <span>Bengaluru, India</span>
+                  <span>Hubballi–Dharwad, Karnataka</span>
                   <a
                     href={`tel:${siteConfig.contact.conciergePhone}`}
                     className="text-[#E9D3B0] hover:underline"

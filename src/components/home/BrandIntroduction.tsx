@@ -41,8 +41,8 @@ export const BrandIntroduction: React.FC<BrandIntroductionProps> = ({ onDiscover
 
               {/* Bottom Architectural Footprint */}
               <div className="relative z-10 pt-3 sm:pt-4 border-t border-[#741A18]/50 flex items-center justify-between text-[10px] sm:text-[11px] font-mono text-[#C9B8A5]">
-                <span>Mughal-Rajput Scenography</span>
-                <span className="text-[#E9D3B0]">Bengaluru, India</span>
+                <span>Heritage Scenography</span>
+                <span className="text-[#E9D3B0]">Hubballi–Dharwad, Karnataka</span>
               </div>
             </div>
 

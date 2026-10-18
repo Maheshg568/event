@@ -157,7 +157,7 @@ export const EnquiryForm: React.FC<EnquiryFormProps> = ({
                 </button>
 
                 <a
-                  href={`https://wa.me/?text=Namaste%20Mahotsava%20Grandeur%2C%20inquiry%20regarding%20booking%20${submittedBooking.referenceId}`}
+                  href={`https://wa.me/916363116158?text=Namaste%20Mahotsava%20Grandeur%2C%20inquiry%20regarding%20booking%20${submittedBooking.referenceId}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full sm:w-auto px-6 py-3.5 rounded-xs text-xs font-serif uppercase tracking-[0.18em] sm:tracking-[0.2em] font-semibold text-[#FFFDF9] hover:text-[#E9D3B0] border border-[#741A18] hover:border-[#C8A66A] bg-[#210404] flex items-center justify-center gap-2 active:scale-98"
@@ -212,7 +212,7 @@ export const EnquiryForm: React.FC<EnquiryFormProps> = ({
                       type="tel"
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                      placeholder="+91 98860 00000"
+                      placeholder="+91 63631 16158"
                       className={`w-full bg-[#210404] pl-10 pr-4 py-3 text-base sm:text-sm text-[#FFFDF9] rounded-xs border outline-none transition-all ${
                         errors.phone ? 'border-rose-500' : 'border-[#741A18] focus:border-[#C8A66A]'
                       }`}

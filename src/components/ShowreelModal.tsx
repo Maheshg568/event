@@ -45,13 +45,13 @@ export const ShowreelModal: React.FC<ShowreelModalProps> = ({ isOpen, onClose, o
               </div>
 
               <span className="text-xs font-mono uppercase tracking-[0.3em] text-[#d4af37] mb-2">
-                ROYALAURA ANTHOLOGY 2026
+                MAHOTSAVA GRANDEUR 2026
               </span>
               <h3 className="font-serif text-2xl sm:text-4xl font-bold uppercase tracking-wider text-[#fbf7ee]">
                 THE ARCHITECTURE OF CELEBRATION
               </h3>
               <p className="mt-3 text-sm text-[#cbd5e1] font-serif italic">
-                A cinematic retrospective spanning 40 royal weddings, 280 executive summits, and private island commissions worldwide.
+                A cinematic retrospective spanning royal weddings, cultural mahotsavas, and prestigious summits across Karnataka.
               </p>
 
               <div className="mt-8 flex items-center gap-4">
@@ -62,7 +62,7 @@ export const ShowreelModal: React.FC<ShowreelModalProps> = ({ isOpen, onClose, o
                   }}
                   className="px-6 py-3 text-xs font-serif tracking-[0.18em] uppercase font-bold text-[#090a0d] bg-gradient-to-r from-[#d4af37] to-[#fae6a6] rounded-sm cursor-pointer shadow-lg hover:shadow-[0_0_20px_rgba(212,175,55,0.4)] transition-all"
                 >
-                  Commission RoyalAura
+                  Commission Mahotsava Grandeur
                 </button>
               </div>
             </div>
