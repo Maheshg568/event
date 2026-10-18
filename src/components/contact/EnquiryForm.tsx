@@ -11,7 +11,6 @@ import {
   Phone,
   Send,
   CheckCircle2,
-  Download,
   MessageSquare,
   ShieldCheck,
   AlertCircle,
@@ -111,11 +110,6 @@ export const EnquiryForm: React.FC<EnquiryFormProps> = ({
     }
   };
 
-  const handleDownloadBrochure = () => {
-    // Generate a clean text summary / print trigger for customer
-    window.print();
-  };
-
   return (
     <section id="contact" className="relative py-14 sm:py-20 lg:py-28 bg-[#210404] text-[#F7F0E6] overflow-hidden">
       {/* Background ambient lighting */}
@@ -177,27 +171,19 @@ export const EnquiryForm: React.FC<EnquiryFormProps> = ({
 
               {/* Action buttons */}
               <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 w-full sm:w-auto">
-                <button
-                  onClick={handleDownloadBrochure}
-                  className="w-full sm:w-auto px-6 py-3.5 rounded-xs text-xs font-serif uppercase tracking-[0.18em] sm:tracking-[0.2em] font-bold text-[#210404] bg-gradient-to-r from-[#C8A66A] to-[#E9D3B0] shadow-md flex items-center justify-center gap-2 cursor-pointer active:scale-98"
-                >
-                  <Download className="w-4 h-4 text-[#210404]" />
-                  <span>Download Dossier Summary</span>
-                </button>
-
                 <a
                   href={`https://wa.me/916363116158?text=Namaste%20Mahotsava%20Grandeur%2C%20inquiry%20regarding%20booking%20${submittedBooking.referenceId}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full sm:w-auto px-6 py-3.5 rounded-xs text-xs font-serif uppercase tracking-[0.18em] sm:tracking-[0.2em] font-semibold text-[#FFFDF9] hover:text-[#E9D3B0] border border-[#741A18] hover:border-[#C8A66A] bg-[#210404] flex items-center justify-center gap-2 active:scale-98"
+                  className="w-full sm:w-auto px-8 py-3.5 rounded-xs text-xs font-serif uppercase tracking-[0.18em] sm:tracking-[0.2em] font-bold text-[#210404] bg-gradient-to-r from-[#C8A66A] via-[#E9D3B0] to-[#C8A66A] shadow-md hover:shadow-[0_8px_30px_rgba(200,166,106,0.4)] flex items-center justify-center gap-2 cursor-pointer active:scale-98 transition-all"
                 >
-                  <MessageSquare className="w-4 h-4 text-[#C8A66A]" />
+                  <MessageSquare className="w-4 h-4 text-[#210404]" />
                   <span>Connect On WhatsApp</span>
                 </a>
 
                 <button
                   onClick={() => setSubmittedBooking(null)}
-                  className="px-4 py-2 text-xs font-mono uppercase tracking-wider text-[#C9B8A5] hover:text-white cursor-pointer"
+                  className="px-5 py-3 text-xs font-mono uppercase tracking-wider text-[#C9B8A5] hover:text-white border border-[#741A18] hover:border-[#C8A66A] rounded-xs cursor-pointer transition-colors"
                 >
                   New Enquiry
                 </button>
