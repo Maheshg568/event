@@ -41,44 +41,20 @@ export const LeadershipSection: React.FC = () => {
               </div>
 
               <div>
-                {/* Header row: Portrait & Identity */}
-                <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6 mb-6">
-                  {/* Portrait photo or Monogram */}
-                  <div className="relative shrink-0">
-                    <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-sm overflow-hidden border-2 border-[#C8A66A] shadow-lg relative bg-[#210404]">
-                      {leader.image ? (
-                        <img
-                          src={leader.image}
-                          alt={leader.name}
-                          className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
-                        />
-                      ) : (
-                        <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-[#350606] to-[#210404] text-[#E9D3B0] font-serif text-2xl font-bold">
-                          {leader.name
-                            .split(' ')
-                            .map((n) => n[0])
-                            .slice(0, 2)
-                            .join('')}
-                        </div>
-                      )}
-                    </div>
-                    <div className="absolute -bottom-2 -right-2 bg-[#C8A66A] text-[#210404] p-1.5 rounded-full shadow-md">
-                      <Crown className="w-3.5 h-3.5" />
-                    </div>
-                  </div>
-
-                  {/* Name and Designation */}
-                  <div className="text-center sm:text-left">
-                    <span className="inline-block px-2.5 py-0.5 mb-2 text-[10px] font-mono uppercase tracking-widest text-[#E9D3B0] bg-[#741A18]/40 border border-[#C8A66A]/30 rounded">
+                {/* Header: Leadership Identity (No photo) */}
+                <div className="mb-6">
+                  <div className="flex items-center gap-2 mb-2">
+                    <Crown className="w-3.5 h-3.5 text-[#C8A66A]" />
+                    <span className="inline-block px-2.5 py-0.5 text-[10px] font-mono uppercase tracking-widest text-[#E9D3B0] bg-[#741A18]/40 border border-[#C8A66A]/30 rounded">
                       {leader.role}
                     </span>
-                    <h3 className="font-serif text-2xl sm:text-3xl font-bold text-[#FFFDF9] tracking-wide">
-                      {leader.name}
-                    </h3>
-                    <p className="text-xs sm:text-sm text-[#C8A66A] font-light mt-0.5 tracking-wider uppercase font-serif">
-                      {leader.title}
-                    </p>
                   </div>
+                  <h3 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-bold text-[#FFFDF9] tracking-wide">
+                    {leader.name}
+                  </h3>
+                  <p className="text-xs sm:text-sm text-[#C8A66A] font-light mt-1 tracking-wider uppercase font-serif">
+                    {leader.title}
+                  </p>
                 </div>
 
                 {/* Quote block */}
