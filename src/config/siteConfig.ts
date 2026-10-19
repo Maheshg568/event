@@ -6,6 +6,7 @@ export interface LeaderMember {
   quote: string;
   bio: string;
   image?: string;
+  imagePosition?: string;
   signature?: string;
   linkedin?: string;
   instagram?: string;
@@ -136,6 +137,8 @@ export const siteConfig: SiteConfig = {
       quote:
         '“Every celebration has a story. Our vision is to transform that story into an extraordinary experience filled with elegance, emotion and unforgettable memories.”',
       bio: 'Rakesh Rathod is the Founder & Chairman of Mahotsava Grandeur, an event management brand based in Hubballi–Dharwad, Karnataka. Driven by a passion for creativity, hospitality and exceptional celebrations, he aims to build a premium event management brand that delivers memorable experiences through thoughtful planning, attention to detail and professional execution. His long-term vision is to establish Mahotsava Grandeur as a leading name in event management across Karnataka.',
+      image: '/images/leadership/rakesh-rathod.jpg',
+      imagePosition: 'center',
       linkedin: 'https://www.linkedin.com/in/rakesh-rathod-179154309?utm_source=share_via&utm_content=profile&utm_medium=member_android',
       instagram: 'https://www.instagram.com/mahotsava_grandeur/',
       email: 'mahotsavagrandeur@gmail.com',
@@ -148,6 +151,8 @@ export const siteConfig: SiteConfig = {
       quote:
         '“Excellence lies in every detail. Our mission is to turn every occasion into a seamless, extraordinary and unforgettable experience.”',
       bio: 'Vaibhav Maddi serves as the Managing Director of Mahotsava Grandeur, an event management brand based in Hubballi–Dharwad, Karnataka. With a focus on operational coordination, vendor partnerships, logistics and guest experience, he contributes to the planning and execution of events. Working alongside the founding leadership, he supports the company’s vision of delivering exceptional celebrations and building a trusted event management brand across Karnataka.',
+      image: '/images/leadership/vaibhav-maddi.png',
+      imagePosition: 'top',
       instagram: 'https://www.instagram.com/mahotsava_grandeur/',
       email: 'mahotsavagrandeur@gmail.com',
     },
