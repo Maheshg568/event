@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'motion/react';
+import { siteConfig } from '../../config/siteConfig';
 import { Sparkles, ArrowRight, ShieldCheck, HeartHandshake, Castle } from 'lucide-react';
 
 interface BrandIntroductionProps {
@@ -54,40 +55,42 @@ export const BrandIntroduction: React.FC<BrandIntroductionProps> = ({ onDiscover
           <div className="lg:col-span-7 flex flex-col items-start">
             <div className="flex items-center gap-2 text-xs font-serif uppercase tracking-[0.25em] sm:tracking-[0.28em] text-[#741A18] font-bold mb-2.5">
               <Sparkles className="w-3.5 h-3.5 text-[#C8A66A]" />
-              <span>THE ART OF CELEBRATION</span>
+              <span>ABOUT US · MAHOTSAVA GRANDEUR</span>
             </div>
 
             <h2 className="font-serif text-2xl sm:text-4xl md:text-5xl font-bold uppercase tracking-[0.03em] text-[#350606] leading-tight text-balance">
-              An Atmosphere Beyond <br />
-              <span className="italic font-normal font-serif text-[#741A18]">The Ordinary</span>
+              Where Every Celebration <br />
+              <span className="italic font-normal font-serif text-[#741A18]">Becomes Grandeur</span>
             </h2>
 
             {/* Gold separator */}
-            <div className="w-16 sm:w-20 h-[1.5px] bg-[#C8A66A] my-4 sm:my-6" />
+            <div className="w-16 sm:w-20 h-[1.5px] bg-[#C8A66A] my-4 sm:my-5" />
 
-            <p className="text-sm sm:text-base md:text-lg text-[#570D0D]/90 font-light leading-relaxed mb-4 sm:mb-6">
-              Some occasions deserve more than a beautiful setting. They deserve an atmosphere that brings people together, celebrates meaningful traditions, and turns important moments into lasting memories.
-            </p>
+            <div className="space-y-3.5 text-xs sm:text-sm md:text-base text-[#570D0D]/90 font-light leading-relaxed mb-6">
+              <p>
+                <strong>MAHOTSAVA GRANDEUR</strong> is an event management and celebration planning brand based in Hubballi–Dharwad, Karnataka. We specialise in planning, coordinating and managing memorable occasions, from weddings and private celebrations to corporate gatherings, cultural mahotsavas and live entertainment events.
+              </p>
+              <p>
+                Our approach combines creativity, organised execution and attention to detail to deliver experiences tailored to each client&apos;s vision. From the first discussion to the final arrangements, we aim to make every celebration seamless, memorable and truly grand.
+              </p>
+              <p className="text-xs sm:text-sm text-[#741A18] font-medium italic border-l-2 border-[#C8A66A] pl-3">
+                “Our mission is to create exceptional experiences and build a trusted event management brand serving clients across Karnataka and beyond.”
+              </p>
+            </div>
 
-            <p className="text-xs sm:text-sm md:text-base text-[#570D0D]/80 leading-relaxed font-light mb-6 sm:mb-8">
-              At Mahotsava Grandeur, every archway, courtyard fountain, and ceremonial hall was conceived to honor the sacred spirit of celebration. With unhurried bespoke service, royal culinary mastery, and world-class acoustic design, we provide a haven where your family’s most cherished celebrations unfold effortlessly.
-            </p>
-
-            {/* Editorial Features with Clean Typographic Separators (Zero-Pill Compliance) */}
-            <div className="flex flex-wrap items-center gap-3 sm:gap-4 text-xs font-serif uppercase tracking-wider text-[#350606] mb-6 sm:mb-8 pt-4 border-t border-[#E9D3B0] w-full">
-              <span className="flex items-center gap-1.5 font-semibold">
-                <ShieldCheck className="w-4 h-4 text-[#C8A66A]" />
-                Unrestricted Exclusivity
+            {/* 8 Approach Pillars Preview Grid */}
+            <div className="w-full pt-4 border-t border-[#E9D3B0] mb-6">
+              <span className="text-[11px] font-serif uppercase tracking-[0.22em] text-[#741A18] font-bold block mb-3">
+                OUR APPROACH &amp; WHY CHOOSE US
               </span>
-              <span aria-hidden="true" className="text-[#C8A66A] hidden sm:inline">·</span>
-              <span className="flex items-center gap-1.5 font-semibold">
-                <HeartHandshake className="w-4 h-4 text-[#C8A66A]" />
-                Dedicated Royal Butler Host
-              </span>
-              <span aria-hidden="true" className="text-[#C8A66A] hidden sm:inline">·</span>
-              <span className="font-semibold">
-                Custom Ceremonial Scenography
-              </span>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-2.5 text-xs text-[#350606]">
+                {siteConfig.whyChooseUs.map((pillar, idx) => (
+                  <div key={idx} className="flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#C8A66A] shrink-0" />
+                    <span className="font-medium leading-snug">{pillar}</span>
+                  </div>
+                ))}
+              </div>
             </div>
 
             {/* Discover Our Story Action */}
@@ -95,7 +98,7 @@ export const BrandIntroduction: React.FC<BrandIntroductionProps> = ({ onDiscover
               onClick={onDiscoverStory}
               className="inline-flex items-center gap-2.5 text-xs font-serif uppercase tracking-[0.2em] sm:tracking-[0.22em] font-bold text-[#570D0D] hover:text-[#C8A66A] transition-colors group cursor-pointer py-1"
             >
-              <span>Discover Our Story</span>
+              <span>Explore Our Story &amp; Leadership</span>
               <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
             </button>
           </div>

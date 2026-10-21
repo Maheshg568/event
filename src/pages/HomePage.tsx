@@ -3,6 +3,7 @@ import { Hero } from '../components/home/Hero';
 import { BrandIntroduction } from '../components/home/BrandIntroduction';
 import { VenueSpaceExplorer } from '../components/venue/VenueSpaceExplorer';
 import { CelebrationsSection } from '../components/celebrations/CelebrationsSection';
+import { ProcessSection } from '../components/home/ProcessSection';
 import { SignatureAtmosphere } from '../components/home/SignatureAtmosphere';
 import { GalleryGrid } from '../components/gallery/GalleryGrid';
 import { EnquiryForm } from '../components/contact/EnquiryForm';
@@ -40,8 +41,11 @@ export const HomePage: React.FC<HomePageProps> = ({
       {/* Section D: The Venue Experience (Interactive Venue Space Explorer) */}
       <VenueSpaceExplorer onSelectSpaceForEnquiry={onSelectSpaceForEnquiry} />
 
-      {/* Section E: Celebrations and Occasions */}
+      {/* Section E: Celebrations and Occasions (All 9 Categories A-I) */}
       <CelebrationsSection onSelectCelebration={onSelectCelebration} />
+
+      {/* Section E2: 6-Step Event Planning Process */}
+      <ProcessSection onOpenEnquiry={onOpenEnquiry} />
 
       {/* Section F: Signature Atmosphere */}
       <SignatureAtmosphere onOpenEnquiry={onOpenEnquiry} />

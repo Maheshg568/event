@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { MahotsavaLogo } from '../components/brand/MahotsavaLogo';
 import { LeadershipSection } from '../components/brand/LeadershipSection';
+import { ProcessSection } from '../components/home/ProcessSection';
 import { siteConfig } from '../config/siteConfig';
 import {
   Sparkles,
@@ -36,14 +37,24 @@ export const StoryPage: React.FC<StoryPageProps> = ({ onOpenEnquiry, onExploreVe
           Where Every Celebration <br />
           <span className="gold-text-shimmer italic font-normal font-serif">Becomes Grandeur</span>
         </h1>
-        <p className="text-xs sm:text-base md:text-lg text-[#C9B8A5] font-light max-w-2xl mx-auto leading-relaxed px-2">
-          Headquartered in <strong className="text-[#FFFDF9]">Hubballi–Dharwad</strong>, Mahotsava Grandeur was established with a singular devotion: to transform every celebration into an extraordinary, poetic experience filled with elegance, emotion, and cherished memories.
-        </p>
+
+        {/* Official 3-Paragraph About Us Narrative */}
+        <div className="max-w-3xl mx-auto text-left space-y-4 p-5 sm:p-8 rounded-sm bg-[#210404]/90 border border-[#C8A66A]/40 shadow-2xl">
+          <p className="text-xs sm:text-sm md:text-base text-[#F7F0E6] font-light leading-relaxed">
+            {siteConfig.aboutUs?.intro}
+          </p>
+          <p className="text-xs sm:text-sm md:text-base text-[#F7F0E6] font-light leading-relaxed">
+            {siteConfig.aboutUs?.approach}
+          </p>
+          <p className="text-xs sm:text-sm md:text-base text-[#E9D3B0] font-medium italic border-l-2 border-[#C8A66A] pl-3">
+            “{siteConfig.aboutUs?.mission}”
+          </p>
+        </div>
 
         {/* Region badge */}
-        <div className="mt-5 inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-[#C8A66A]/40 bg-[#210404]/80 text-[11px] font-mono text-[#E9D3B0]">
+        <div className="mt-6 inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#C8A66A]/40 bg-[#210404]/80 text-[11px] font-mono text-[#E9D3B0]">
           <MapPin className="w-3.5 h-3.5 text-[#C8A66A]" />
-          <span>Headquarters: Hubballi–Dharwad, Karnataka · Serving North Karnataka & Beyond</span>
+          <span>Operations Hub: Hubballi–Dharwad, Karnataka – 580020 · Serving Karnataka &amp; Beyond</span>
         </div>
       </div>
 
@@ -267,6 +278,11 @@ export const StoryPage: React.FC<StoryPageProps> = ({ onOpenEnquiry, onExploreVe
           </blockquote>
           <div className="w-16 h-[1px] bg-[#C8A66A] mx-auto mt-5 sm:mt-6" />
         </div>
+      </div>
+
+      {/* 6-Step Event Planning Process Roadmap */}
+      <div className="mt-10 sm:mt-16">
+        <ProcessSection onOpenEnquiry={onOpenEnquiry} />
       </div>
 
       {/* Founder & Managing Director Leadership Section */}

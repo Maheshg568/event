@@ -116,17 +116,17 @@ export const ContactPage: React.FC<ContactPageProps> = ({
           <div className="p-5 rounded-sm bg-[#350606] border border-[#741A18]/60 flex flex-col justify-between">
             <div className="flex items-start gap-3.5">
               <div className="w-9 h-9 rounded-full bg-[#210404] border border-[#C8A66A]/40 flex items-center justify-center text-[#E9D3B0] shrink-0">
-                <Instagram className="w-4 h-4" />
+                <Instagram className="w-4 h-4 text-[#C8A66A]" />
               </div>
               <div>
                 <h4 className="font-serif font-bold text-xs sm:text-sm text-[#FFFDF9] uppercase tracking-wider mb-1">
-                  Social Presence
+                  Official Instagram
                 </h4>
                 <p className="text-xs text-[#C9B8A5]">
-                  Follow our celebration portfolio on Instagram.
+                  Follow our visual portfolio and real-time updates.
                 </p>
                 <a
-                  href="https://www.instagram.com/mahotsava_grandeur?dlrf=Y2tnNHF1Y2hiNnBv"
+                  href="https://www.instagram.com/mahotsava_grandeur/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-block text-[11px] text-[#E9D3B0] hover:text-[#FFFDF9] font-mono mt-1.5 underline"
@@ -136,6 +136,14 @@ export const ContactPage: React.FC<ContactPageProps> = ({
               </div>
             </div>
           </div>
+        </div>
+
+        {/* Requirement 8: Service Locations Notice */}
+        <div className="p-4 sm:p-5 rounded-sm bg-[#350606]/80 border border-[#C8A66A]/40 text-center text-xs text-[#C9B8A5] flex flex-col sm:flex-row items-center justify-center gap-3">
+          <MapPin className="w-4 h-4 text-[#C8A66A] shrink-0" />
+          <span>
+            <strong className="text-[#FFFDF9]">Primary Service Area:</strong> Hubballi–Dharwad and North Karnataka, with an expansion goal of serving clients across Karnataka and beyond. All operations are centrally planned from our Hubballi–Dharwad headquarters (580020).
+          </span>
         </div>
       </div>
 

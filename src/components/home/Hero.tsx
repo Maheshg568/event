@@ -118,7 +118,7 @@ export const Hero: React.FC<HeroProps> = ({
           <MahotsavaLogo variant="full" size="xl" />
         </motion.div>
 
-        {/* 2. Eyebrow - Clean Editorial Unboxed Typography (No wrapped pill) */}
+        {/* 2. Eyebrow - Brand Tagline */}
         <motion.div
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
@@ -126,23 +126,22 @@ export const Hero: React.FC<HeroProps> = ({
           className="flex items-center justify-center gap-2 sm:gap-3 mb-2.5 sm:mb-4 max-w-full px-2"
         >
           <Sparkles className="w-3 h-3 text-[#C8A66A] shrink-0" />
-          <span className="font-serif text-[9px] sm:text-xs tracking-[0.22em] sm:tracking-[0.3em] uppercase text-[#E9D3B0] font-medium text-center">
-            {siteConfig.eyebrow}
+          <span className="font-serif text-[10px] sm:text-xs tracking-[0.22em] sm:tracking-[0.28em] uppercase text-[#E9D3B0] font-semibold text-center">
+            {siteConfig.tagline}
           </span>
           <Sparkles className="w-3 h-3 text-[#C8A66A] shrink-0 hidden sm:block" />
         </motion.div>
 
-        {/* 3. Headline */}
-        <motion.h2
+        {/* 3. Suggested Main Headline */}
+        <motion.h1
           initial={{ opacity: 0, y: 25 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.75, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
-          className="font-serif text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold uppercase tracking-[0.05em] text-[#FFFDF9] leading-[1.18] sm:leading-[1.12] text-balance max-w-3xl px-2"
+          className="font-serif text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold uppercase tracking-[0.04em] text-[#FFFDF9] leading-[1.18] sm:leading-[1.12] text-balance max-w-4xl px-2"
         >
-          WHERE EVERY <br />
-          CELEBRATION <br />
-          <span className="gold-text-shimmer italic font-normal font-serif">BECOMES GRANDEUR</span>
-        </motion.h2>
+          Turning Every Occasion <br />
+          <span className="gold-text-shimmer italic font-normal font-serif">Into an Extraordinary Experience</span>
+        </motion.h1>
 
         {/* Delicate Gold Divider */}
         <motion.div
@@ -157,33 +156,33 @@ export const Hero: React.FC<HeroProps> = ({
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.75 }}
-          className="max-w-xl text-xs sm:text-base md:text-lg text-[#C9B8A5] font-light leading-relaxed tracking-wide text-balance mb-5 sm:mb-8 px-3"
+          className="max-w-2xl text-xs sm:text-base md:text-lg text-[#C9B8A5] font-light leading-relaxed tracking-wide text-balance mb-6 sm:mb-8 px-3"
         >
           {siteConfig.heroDescription}
         </motion.p>
 
-        {/* 5. Primary and Secondary CTAs */}
+        {/* 5. Primary and Secondary CTAs (Explore Our Services & Plan Your Event) */}
         <motion.div
           initial={{ opacity: 0, scale: 0.94 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6, delay: 0.9 }}
           className="flex flex-col sm:flex-row items-center gap-3 sm:gap-4 w-full sm:w-auto px-4 sm:px-0 max-w-xs sm:max-w-none"
         >
-          {/* Primary CTA: EXPLORE THE VENUE */}
+          {/* Primary CTA: Explore Our Services */}
           <button
             onClick={onExploreVenue}
-            className="w-full sm:w-auto px-6 sm:px-8 py-3.5 sm:py-4 rounded-xs text-xs font-serif uppercase tracking-[0.18em] sm:tracking-[0.22em] font-bold text-[#210404] bg-gradient-to-r from-[#C8A66A] via-[#E9D3B0] to-[#C8A66A] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_8px_30px_rgba(200,166,106,0.4)] active:scale-95 flex items-center justify-center gap-2 cursor-pointer shadow-md"
+            className="w-full sm:w-auto px-7 sm:px-9 py-3.5 sm:py-4 rounded-xs text-xs font-serif uppercase tracking-[0.18em] sm:tracking-[0.22em] font-bold text-[#210404] bg-gradient-to-r from-[#C8A66A] via-[#E9D3B0] to-[#C8A66A] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_8px_30px_rgba(200,166,106,0.4)] active:scale-95 flex items-center justify-center gap-2 cursor-pointer shadow-md"
           >
-            <Compass className="w-3.5 h-3.5 text-[#210404]" />
-            <span>Explore The Venue</span>
+            <Sparkles className="w-3.5 h-3.5 text-[#210404]" />
+            <span>Explore Our Services</span>
           </button>
 
-          {/* Secondary CTA: ENQUIRE NOW */}
+          {/* Secondary CTA: Plan Your Event */}
           <button
             onClick={onOpenEnquiry}
-            className="w-full sm:w-auto px-6 sm:px-8 py-3.5 sm:py-4 rounded-xs text-xs font-serif uppercase tracking-[0.18em] sm:tracking-[0.2em] font-semibold text-[#F7F0E6] hover:text-[#E9D3B0] border border-[#741A18] hover:border-[#C8A66A]/60 bg-[#350606]/80 backdrop-blur-md transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_8px_25px_rgba(33,4,4,0.6)] active:scale-95 flex items-center justify-center gap-2 cursor-pointer"
+            className="w-full sm:w-auto px-7 sm:px-9 py-3.5 sm:py-4 rounded-xs text-xs font-serif uppercase tracking-[0.18em] sm:tracking-[0.2em] font-semibold text-[#F7F0E6] hover:text-[#E9D3B0] border border-[#741A18] hover:border-[#C8A66A]/60 bg-[#350606]/80 backdrop-blur-md transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_8px_25px_rgba(33,4,4,0.6)] active:scale-95 flex items-center justify-center gap-2 cursor-pointer"
           >
-            <span>Enquire Now</span>
+            <span>Plan Your Event</span>
             <ArrowRight className="w-3.5 h-3.5" />
           </button>
         </motion.div>

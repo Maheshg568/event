@@ -14,13 +14,14 @@ export const CelebrationsPage: React.FC<CelebrationsPageProps> = ({ onSelectCele
       <div className="py-10 sm:py-16 px-4 sm:px-6 lg:px-8 text-center max-w-4xl mx-auto">
         <div className="inline-flex items-center gap-2 text-xs font-serif uppercase tracking-[0.25em] sm:tracking-[0.3em] text-[#741A18] font-bold mb-2 sm:mb-3">
           <Sparkles className="w-3.5 h-3.5 text-[#C8A66A]" />
-          <span>EVENTS & TRADITIONS</span>
+          <span>ALL EVENT MANAGEMENT SERVICES</span>
         </div>
         <h1 className="font-serif text-3xl sm:text-5xl md:text-6xl font-bold uppercase tracking-[0.04em] text-[#350606] mb-3 sm:mb-4">
-          Celebrations of <span className="italic font-normal font-serif text-[#741A18]">Distinction</span>
+          Every Occasion Into An <br />
+          <span className="italic font-normal font-serif text-[#741A18]">Extraordinary Experience</span>
         </h1>
         <p className="text-xs sm:text-base text-[#570D0D]/80 font-light max-w-2xl mx-auto leading-relaxed px-2">
-          From multi-day Vedic nuptials to grand reception galas and corporate summits, explore our bespoke celebration disciplines.
+          From grand weddings and elegant engagements to corporate gatherings, cultural festivals, private celebrations and spectacular live events, MAHOTSAVA GRANDEUR brings every vision to life with creativity, precision and exceptional planning.
         </p>
       </div>
 

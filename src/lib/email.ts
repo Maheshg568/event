@@ -2,10 +2,12 @@ export interface OrderEmailPayload {
   referenceId: string;
   fullName: string;
   phone: string;
-  email: string;
+  email?: string;
   occasionType: string;
   preferredDate: string;
-  guestCount: number;
+  eventLocation?: string;
+  estimatedBudget?: string;
+  guestCount?: number;
   space?: string;
   setup?: string;
   message?: string;
@@ -21,17 +23,17 @@ export async function sendOrderEmailNotification(order: OrderEmailPayload): Prom
       _subject: `👑 New Celebration Enquiry [${order.referenceId}] - ${order.fullName}`,
       _template: 'table',
       _captcha: 'false',
-      _replyto: order.email,
+      _replyto: order.email || 'mahotsavagrandeur@gmail.com',
       'Dossier Reference ID': order.referenceId,
       'Customer Full Name': order.fullName,
       'Telephone / Contact': order.phone,
-      'Customer Email': order.email,
-      'Occasion Type': order.occasionType,
-      'Preferred Event Date': order.preferredDate,
-      'Guest Count': order.guestCount,
-      'Preferred Venue / Space': order.space || 'Grand Durbar Hall',
-      'Preferred Ceremonial Setup': order.setup || 'Vedic Mandap',
-      'Ceremonial Directives / Notes': order.message || 'No custom directives provided.',
+      'Customer Email': order.email || 'Not provided (Optional)',
+      'Type of Event': order.occasionType,
+      'Event Date': order.preferredDate,
+      'Event Location': order.eventLocation || 'Hubballi–Dharwad',
+      'Estimated Budget': order.estimatedBudget || 'Not specified',
+      'Estimated Guests': order.guestCount ? order.guestCount.toString() : 'Optional / TBD',
+      'Additional Requirements': order.message || 'No custom directives provided.',
       'Submitted At (IST)': new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' }),
     };
 

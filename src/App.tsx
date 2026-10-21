@@ -96,13 +96,13 @@ export default function App() {
 
   const handleExploreVenue = () => {
     if (activePage === 'home') {
-      const el = document.getElementById('venue');
+      const el = document.getElementById('celebrations') || document.getElementById('venue');
       if (el) {
         el.scrollIntoView({ behavior: 'smooth' });
         return;
       }
     }
-    handleNavigate('venue');
+    handleNavigate('celebrations');
   };
 
   const handleSelectSpaceForEnquiry = (spaceName: string, setupName: string) => {

@@ -34,10 +34,20 @@ export interface SiteConfig {
   businessCategory: string;
   primaryMarket: string;
   expansionGoal: string;
+  aboutUs?: {
+    intro: string;
+    approach: string;
+    mission: string;
+  };
   vision: string;
   mission: string;
   brandPromise: string;
   whyChooseUs: string[];
+  planningProcess?: {
+    step: string;
+    title: string;
+    description: string;
+  }[];
   coreValues: CoreValue[];
   contact: {
     inquiryEmail: string;
@@ -66,12 +76,20 @@ export const siteConfig: SiteConfig = {
   brandName: 'MAHOTSAVA GRANDEUR',
   tagline: 'Where Every Celebration Becomes Grandeur',
   eyebrow: 'EVENT MANAGEMENT & CELEBRATION PLANNING',
-  heroHeadline: 'Where Every Celebration Becomes Grandeur',
+  heroHeadline: 'Turning Every Occasion Into an Extraordinary Experience',
   heroDescription:
-    'Hubballi–Dharwad’s premier event management brand, delivering unforgettable weddings, cultural mahotsavas, corporate summits, and bespoke celebrations with refined elegance and meticulous execution.',
+    'From grand weddings and elegant engagements to corporate gatherings, cultural festivals, private celebrations and spectacular live events, MAHOTSAVA GRANDEUR brings every vision to life with creativity, precision and exceptional planning.',
   businessCategory: 'Event Management & Celebration Planning',
   primaryMarket: 'Hubballi–Dharwad and North Karnataka',
   expansionGoal: 'Across Karnataka and beyond',
+  aboutUs: {
+    intro:
+      'MAHOTSAVA GRANDEUR is an event management and celebration planning brand based in Hubballi–Dharwad, Karnataka. We specialise in planning, coordinating and managing memorable occasions, from weddings and private celebrations to corporate gatherings, cultural mahotsavas and live entertainment events.',
+    approach:
+      "Our approach combines creativity, organised execution and attention to detail to deliver experiences tailored to each client's vision. From the first discussion to the final arrangements, we aim to make every celebration seamless, memorable and truly grand.",
+    mission:
+      'Our mission is to create exceptional experiences and build a trusted event management brand serving clients across Karnataka and beyond.',
+  },
   vision:
     'To establish Mahotsava Grandeur as one of Karnataka’s most trusted and recognised event management brands, known for creativity, professionalism, premium experiences and outstanding coordination.',
   mission:
@@ -79,12 +97,22 @@ export const siteConfig: SiteConfig = {
   brandPromise:
     'At Mahotsava Grandeur, we believe every celebration deserves a distinctive identity. From intimate gatherings to grand celebrations, we bring creativity, coordination and attention to detail together to create experiences that people cherish for years to come.',
   whyChooseUs: [
-    'Personalised planning tailored to each client’s unique vision.',
-    'Creative concepts with an authentic, premium aesthetic.',
-    'Coordinated end-to-end vendor and event management.',
-    'Thoughtful focus on guest hospitality and seamless logistics.',
-    'Transparent, professional communication and organised execution.',
-    'Flexible event solutions crafted for celebrations of all scales.',
+    'Personalised event planning',
+    'Creative concepts and customised themes',
+    'Professional planning and coordination',
+    'Vendor and logistics management',
+    'Attention to detail',
+    'Flexible event solutions for different budgets',
+    'Focus on guest experience',
+    'End-to-end event coordination, depending on the selected package',
+  ],
+  planningProcess: [
+    { step: '01', title: 'Share Your Requirements', description: 'Share your event requirements, dates, scale, and aspirations with our team.' },
+    { step: '02', title: 'Discuss Vision & Budget', description: 'Discuss your vision, preferences, traditions, themes, and budgetary expectations.' },
+    { step: '03', title: 'Develop Customised Plan', description: 'Develop a tailored event blueprint, thematic concepts, layout, and vendor timeline.' },
+    { step: '04', title: 'Coordinate Services & Vendors', description: 'Coordinate all vendors, production, decoration, hospitality, and logistics seamlessly.' },
+    { step: '05', title: 'Execute & Manage Event', description: 'Execute and manage on-ground operations with meticulous attention to detail.' },
+    { step: '06', title: 'Deliver Memorable Celebration', description: 'Deliver an unforgettable, stress-free celebration that your guests cherish forever.' },
   ],
   coreValues: [
     { title: 'Creativity', description: 'Bringing distinctive, bespoke ideas to every single celebration.' },
@@ -117,7 +145,7 @@ export const siteConfig: SiteConfig = {
   socials: [
     {
       platform: 'Instagram',
-      url: 'https://www.instagram.com/mahotsava_grandeur?dlrf=Y2tnNHF1Y2hiNnBv',
+      url: 'https://www.instagram.com/mahotsava_grandeur/',
     },
     {
       platform: 'LinkedIn (Founder)',
