@@ -14,7 +14,6 @@ import {
   ChevronRight,
   MapPin,
   Maximize2,
-  Info,
 } from 'lucide-react';
 
 interface GalleryGridProps {
@@ -168,13 +167,6 @@ export const GalleryGrid: React.FC<GalleryGridProps> = ({ onOpenEnquiry }) => {
           </AnimatePresence>
         </div>
 
-        {/* Transparent Concept Note as specified in Requirement 5 */}
-        <div className="mt-8 p-3.5 rounded-xs bg-[#210404]/70 border border-[#741A18]/50 flex items-start sm:items-center gap-2.5 text-[11px] font-mono text-[#C9B8A5]">
-          <Info className="w-4 h-4 text-[#C8A66A] shrink-0 mt-0.5 sm:mt-0" />
-          <span>
-            <strong>Concept Inspirations &amp; Event Aesthetics:</strong> Photographs illustrate our design styling, stage architectures, and atmospheric production standards across our service categories. Completed client event photographs and videos are showcased with client authorization.
-          </span>
-        </div>
       </div>
 
       {/* Fullscreen Lightbox Modal */}
