@@ -106,7 +106,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({
                 </a>
                 <div className="flex items-center gap-1.5 text-[11px] text-[#C9B8A5]/80 mt-2 font-mono">
                   <Clock className="w-3.5 h-3.5 text-[#C8A66A]" />
-                  <span>Mon – Sun, 10am – 7pm</span>
+                  <span>Mon – Sun, 8:00 AM – 10:00 PM</span>
                 </div>
               </div>
             </div>

@@ -132,7 +132,7 @@ export const siteConfig: SiteConfig = {
     state: 'Karnataka',
     pinCode: '580020',
     officeAddress: 'Hubballi–Dharwad, Karnataka – 580020, India',
-    operatingHours: 'Monday – Sunday, 10:00 AM – 7:00 PM IST',
+    operatingHours: 'Monday – Sunday, 8:00 AM – 10:00 PM IST',
   },
   navigation: [
     { label: 'Home', href: '#home', pageId: 'home' },

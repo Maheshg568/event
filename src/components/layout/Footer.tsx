@@ -147,7 +147,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenEnquiry }) => 
 
               <div className="flex items-start gap-2.5 text-[#C9B8A5]/80">
                 <Clock className="w-4 h-4 text-[#C8A66A] shrink-0 mt-0.5" />
-                <span>Mon – Sun, 10:00 AM – 7:00 PM IST</span>
+                <span>{siteConfig.contact.operatingHours}</span>
               </div>
             </div>
 
